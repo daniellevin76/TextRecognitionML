@@ -3,7 +3,6 @@
     package="io.gritacademy.textrecognitionml">
 
     <queries>
-
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
@@ -16,6 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TextRecognitionML">
+        <activity
+            android:name=".MlKitActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
