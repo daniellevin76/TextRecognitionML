@@ -3,13 +3,12 @@ package io.gritacademy.textrecognitionml;
 import static com.google.mlkit.vision.common.InputImage.fromBitmap;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.camera.core.CameraX;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -18,14 +17,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
-import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.media.Image;
-import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -46,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String text;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,12 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextMultiLine = findViewById(R.id.editTextMultiLine);
         readBtn = findViewById(R.id.readButton);
 
-
-
         readBtn.setOnClickListener(this);
         scanBtn.setOnClickListener(v -> {
-            recognizeText(inputImage);
-            editTextMultiLine.setText(text);
+          Intent intent = new Intent(this, CameraXActivity.class);
+          startActivity(intent);
 
         });
 
