@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TextRecognitionML">
         <activity
-            android:name=".CameraXActivity"
+            android:name=".LoadImageActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
