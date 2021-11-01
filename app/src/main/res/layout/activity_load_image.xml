@@ -19,11 +19,20 @@
         android:id="@+id/loadImageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginStart="68dp"
+        android:text="load image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loadImageView"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/getTextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toEndOf="@+id/loadImageBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
